@@ -2,7 +2,7 @@
 
 A Retrieval-Augmented Generation (RAG) system that processes PDF documents from URLs and answers queries using FAISS vector search combined with ChatGroq LLM.
 
-## 🚀 Features
+##  Features
 
 - **PDF Text Extraction**: Extract text content from PDF URLs
 - **Vector Search**: FAISS-based semantic search for relevant document chunks
@@ -10,7 +10,7 @@ A Retrieval-Augmented Generation (RAG) system that processes PDF documents from 
 - **Optimized Chunking**: Smart text chunking with sentence boundary detection
 - **Concise Responses**: Formatted, policy-expert style answers
 
-## 📋 Requirements
+##  Requirements
 
 ### Core Dependencies
 - `faiss-cpu>=1.7.4` - Vector similarity search
@@ -51,7 +51,7 @@ GROQ_API_KEY=your_groq_api_key_here
    echo "GROQ_API_KEY=your_api_key_here" > .env
    ```
 
-## 🎯 Usage
+##  Usage
 
 ### Basic Usage
 ```python
@@ -80,7 +80,7 @@ queries_json = json.dumps({
 answers = process_pdf_queries(pdf_url, queries_json, groq_api_key)
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Hackrx/
@@ -91,7 +91,7 @@ Hackrx/
 └── README.md                # Project documentation
 ```
 
-## 🔧 Key Components
+##  Key Components
 
 ### FAISSRetriever Class
 - **Text Chunking**: Intelligent text splitting with overlap
@@ -109,7 +109,7 @@ Hackrx/
 - **Prompt Engineering**: Policy-expert style formatting
 - **Response Cleaning**: Automatic answer formatting
 
-## 🎯 Example Queries
+##  Example Queries
 
 The system is optimized for policy-related queries:
 
@@ -118,7 +118,7 @@ The system is optimized for policy-related queries:
 - **Exclusions**: "What are the exclusions in this policy?"
 - **Claims**: "What documents are required for claim submission?"
 
-## ⚙️ Configuration
+## Configuration
 
 ### Embedding Model
 Default: `all-MiniLM-L6-v2`
@@ -135,8 +135,8 @@ Default: `all-MiniLM-L6-v2`
 - **Model**: `llama-3.1-8b-instant`
 - **Temperature**: 0.1 (deterministic)
 - **Max Tokens**: 150 (concise responses)
-
-## 🔍 Troubleshooting
+  
+## Troubleshooting
 
 ### Common Issues
 
@@ -158,14 +158,14 @@ Default: `all-MiniLM-L6-v2`
    - Check internet connectivity
    - Verify URL format and permissions
 
-## 📊 Performance
+## Performance
 
 - **Chunk Processing**: ~126 chunks for typical policy document
 - **Embedding Generation**: ~2-3 seconds for full document
 - **Query Response**: ~1-2 seconds per query
 - **Memory Usage**: ~500MB for embeddings + model
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -173,13 +173,3 @@ Default: `all-MiniLM-L6-v2`
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is part of the HackRx challenge submission.
-
-## 🙏 Acknowledgments
-
-- **FAISS**: Facebook AI Similarity Search
-- **SentenceTransformers**: Hugging Face
-- **LangChain**: LangChain Community
-- **ChatGroq**: Groq API
