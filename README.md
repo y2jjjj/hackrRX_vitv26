@@ -1,8 +1,9 @@
+
 # RAG System for PDF Processing and Query Answering
 
 A Retrieval-Augmented Generation (RAG) system that processes PDF documents from URLs and answers queries using FAISS vector search combined with ChatGroq LLM.
 
-##  Features
+## Features
 
 - **PDF Text Extraction**: Extract text content from PDF URLs
 - **Vector Search**: FAISS-based semantic search for relevant document chunks
@@ -10,7 +11,7 @@ A Retrieval-Augmented Generation (RAG) system that processes PDF documents from 
 - **Optimized Chunking**: Smart text chunking with sentence boundary detection
 - **Concise Responses**: Formatted, policy-expert style answers
 
-##  Requirements
+## Requirements
 
 ### Core Dependencies
 - `faiss-cpu>=1.7.4` - Vector similarity search
@@ -27,31 +28,29 @@ Create a `.env` file in the project root with your GROQ API key:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-## 🛠️ Installation
+## Installation
 
-1. **Clone the repository**
+1. Clone the repository:
    ```bash
    git clone <repository-url>
    cd Hackrx
    ```
 
-2. **Install dependencies**
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
-   Or install individually:
+   or install individually:
    ```bash
    pip install faiss-cpu PyPDF2 sentence-transformers langchain-groq python-dotenv requests numpy
    ```
 
-3. **Set up environment variables**
+3. Set up environment variables:
    ```bash
-   # Create .env file and add your GROQ API key
    echo "GROQ_API_KEY=your_api_key_here" > .env
    ```
 
-##  Usage
+## Usage
 
 ### Basic Usage
 ```python
@@ -80,7 +79,7 @@ queries_json = json.dumps({
 answers = process_pdf_queries(pdf_url, queries_json, groq_api_key)
 ```
 
-##  Project Structure
+## Project Structure
 
 ```
 Hackrx/
@@ -91,7 +90,7 @@ Hackrx/
 └── README.md                # Project documentation
 ```
 
-##  Key Components
+## Key Components
 
 ### FAISSRetriever Class
 - **Text Chunking**: Intelligent text splitting with overlap
@@ -109,7 +108,7 @@ Hackrx/
 - **Prompt Engineering**: Policy-expert style formatting
 - **Response Cleaning**: Automatic answer formatting
 
-##  Example Queries
+## Example Queries
 
 The system is optimized for policy-related queries:
 
@@ -135,20 +134,18 @@ Default: `all-MiniLM-L6-v2`
 - **Model**: `llama-3.1-8b-instant`
 - **Temperature**: 0.1 (deterministic)
 - **Max Tokens**: 150 (concise responses)
-  
+
 ## Troubleshooting
 
 ### Common Issues
 
 1. **Import Errors**
    ```bash
-   # Ensure all packages are installed
    pip install --upgrade faiss-cpu PyPDF2 sentence-transformers langchain-groq
    ```
 
 2. **GROQ API Key**
    ```bash
-   # Check environment variable
    echo $GROQ_API_KEY  # Linux/Mac
    echo %GROQ_API_KEY%  # Windows
    ```
@@ -173,3 +170,4 @@ Default: `all-MiniLM-L6-v2`
 4. Test thoroughly
 5. Submit a pull request
 
+---
