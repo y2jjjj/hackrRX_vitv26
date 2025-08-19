@@ -1,4 +1,3 @@
-
 # RAG System for PDF Processing and Query Answering
 
 A Retrieval-Augmented Generation (RAG) system that processes PDF documents from URLs and answers queries using FAISS vector search combined with ChatGroq LLM.
